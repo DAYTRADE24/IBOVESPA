@@ -1,0 +1,21 @@
+const ctx = document.getElementById('graficoIbovespa').getContext('2d');
+const graficoIbovespa = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+        datasets: [{
+            label: 'Ibovespa',
+            data: [120000, 125000, 123000, 126000, 130000, 128000],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1,
+            fill: false
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
